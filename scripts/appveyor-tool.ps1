@@ -52,7 +52,7 @@ Function Bootstrap {
   tzutil /s "GMT Standard Time"
   tzutil /g
   Progress "Downloading R.iso"
-  bash -c 'curl -s -L https://rportable.blob.core.windows.net/r-portable/master/R.vhd.gz | gunzip -c > ../R.vhd'
+  bash -c 'curl -s -L https://rportable.blob.core.windows.net/r-portable/13-vhd/R.vhd.gz | gunzip -c > ../R.vhd'
 
   Progress "Getting full path for R.vhd"
   $ImageFullPath = Get-ChildItem "..\R.vhd" | % { $_.FullName }
